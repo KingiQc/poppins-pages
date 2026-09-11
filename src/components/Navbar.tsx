@@ -1,4 +1,5 @@
-import { Briefcase, Building2, ChevronDown, Home, Sun } from "lucide-react";
+import { Briefcase, Building2, ChevronDown, Home, Moon, Sun } from "lucide-react";
+import { useTheme } from "@/hooks/useTheme";
 import { Logo } from "./Logo";
 
 const links = [
