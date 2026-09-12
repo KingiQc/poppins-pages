@@ -8,6 +8,8 @@ const links = [
 ];
 
 export function Navbar() {
+  const { theme, toggle } = useTheme();
+
   return (
     <header className="sticky top-0 z-50 border-b border-border/70 bg-surface/85 backdrop-blur">
       <nav className="mx-auto flex h-[76px] max-w-[1400px] items-center justify-between gap-6 px-6">
@@ -37,10 +39,11 @@ export function Navbar() {
         <div className="flex items-center gap-3">
           <button
             type="button"
-            aria-label="Toggle theme"
+            aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+            onClick={toggle}
             className="inline-flex h-10 w-10 items-center justify-center rounded-full text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
           >
-            <Sun className="h-5 w-5" />
+            {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
           </button>
           <button
             type="button"
