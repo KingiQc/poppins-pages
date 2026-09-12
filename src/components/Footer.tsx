@@ -1,14 +1,15 @@
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import { Logo } from "./Logo";
+import { FlagIcon } from "./FlagIcon";
 
 const jobSeekers = ["Browse All Jobs", "Remote Jobs", "Saved Jobs"];
 const countries = [
-  { flag: "🇩🇪", name: "Germany" },
-  { flag: "🇺🇸", name: "United States" },
-  { flag: "🇳🇱", name: "Netherlands" },
-  { flag: "🇬🇧", name: "United Kingdom" },
-  { flag: "🇫🇷", name: "France" },
-  { flag: "🇮🇳", name: "India" },
+  { code: "DE" as const, name: "Germany" },
+  { code: "US" as const, name: "United States" },
+  { code: "NL" as const, name: "Netherlands" },
+  { code: "GB" as const, name: "United Kingdom" },
+  { code: "FR" as const, name: "France" },
+  { code: "IN" as const, name: "India" },
 ];
 const company = ["For Employers", "Privacy Policy", "Terms of Service", "About", "Contact", "Blog"];
 
