@@ -56,7 +56,7 @@ export function Footer() {
               {countries.map((c) => (
                 <li key={c.name}>
                   <a href="#" className="flex items-center gap-3 transition-colors hover:text-foreground">
-                    <span aria-hidden="true">{c.flag}</span>
+                    <FlagIcon code={c.code} />
                     {c.name}
                   </a>
                 </li>
@@ -80,13 +80,13 @@ export function Footer() {
 
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-border pt-6 sm:flex-row">
           <p className="text-sm text-muted-foreground">© 2026 Haystack. All rights reserved.</p>
-          <div className="flex items-center gap-3 text-lg" aria-hidden="true">
-            <span>🇩🇪</span>
-            <span>🇺🇸</span>
-            <span>🇫🇷</span>
-            <span>🇳🇱</span>
-            <span>🇬🇧</span>
-            <span>🇮🇹</span>
+          <div className="flex items-center gap-3" aria-hidden="true">
+            <FlagIcon code="DE" />
+            <FlagIcon code="US" />
+            <FlagIcon code="FR" />
+            <FlagIcon code="NL" />
+            <FlagIcon code="GB" />
+            <FlagIcon code="IT" />
           </div>
         </div>
       </div>
